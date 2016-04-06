@@ -3,5 +3,6 @@
 
   <small><em><%= post.timestamp %></em></small>
 
-  <p><%= truncate(strip_tags(post.body), length: 600) %></p>
+  <p><%#= truncate(strip_tags(post.body), length: 600) %>
+  <%= simple_format truncate(h(post.body), length: 400, separator: ' ') %><%= link_to "Read More", post_path(post)%> </p>
 </div>

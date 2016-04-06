@@ -6,4 +6,8 @@ class PostsController < ApplicationController
   		format.js
 		end
   end
+
+  def show 
+  	@post  = Post.find(params[:id])
+  end
 end
